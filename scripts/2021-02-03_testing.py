@@ -15,7 +15,7 @@ from selenium.webdriver.common.keys import Keys
 # "which geckodriver" into term to find path
 driver = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
 
-# driver.get("https://www.blakefallconroy.com")
+driver.get("https://bfallc.github.io/seleniumTests/testPages/")
 # elem2 = driver.find_element_by_css_selector('a[href*="statement"]')
 # driver.execute_script("arguments[0].scrollIntoView();", elem2)
 
@@ -23,23 +23,22 @@ driver = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
 # actions.move_to_element(elem2).click().perform()
 
 # #open a website
-driver.get("https://www.amazon.com")
+# driver.get("https://www.amazon.com")
 
 # #check that "python" is in the webpage title
 # assert "Amazon" in driver.title
 
 # #find the searchbar (named "q")
-elem = driver.find_element_by_name("field-keywords")
+# elem = driver.find_element_by_name("field-keywords")
 # #clear the text box just in case
-elem.clear()
+# elem.clear()
 # #type some stuff
-elem.send_keys("house")
+# elem.send_keys("house")
 # #hit return
-elem.send_keys(Keys.RETURN)
+# elem.send_keys(Keys.RETURN)
 
-time.sleep(5)
-# driver.implicitly_wait(3)
-print("waited 3 sec")
+# time.sleep(5)
+# print("waited 3 sec")
 
 #find the second link in search results
 
@@ -49,8 +48,9 @@ print("waited 3 sec")
 # #works
 # elem2 = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[1]/div[2]/div/span[3]/div[2]/div[3]/div/span/div/div/div[2]/div[2]/div/div[1]/h2/a")
 
-searchResults = driver.find_elements_by_partial_link_text("house")
-searchR = driver.find_elements(By.)
+# searchResults = driver.find_elements_by_partial_link_text("result")
+searchResults = driver.find_elements_by_xpath(".//span")
+# searchR = driver.find_elements(By.)
 print("elem2")
 for r in searchResults:
     print(r.text)
